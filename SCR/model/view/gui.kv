@@ -1,0 +1,69 @@
+ScreenManager:
+    LoginScreen:
+    MenuScreen:
+
+<LoginScreen>:
+    name: "login"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: "Nombre:"
+        TextInput:
+            id: nombre
+
+        Label:
+            text: "Correo:"
+        TextInput:
+            id: correo
+
+        Label:
+            text: "Contraseña:"
+        TextInput:
+            id: contraseña
+            password: True
+
+        Button:
+            text: "Registrar"
+            on_release: root.registrar()
+
+        Button:
+            text: "Iniciar sesión"
+            on_release: root.iniciar_sesion()
+
+<MenuScreen>:
+    name: "menu"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: "Descripción:"
+        TextInput:
+            id: descripcion
+
+        Label:
+            text: "Responsable:"
+        TextInput:
+            id: responsable
+
+        Label:
+            text: "Condiciones climáticas:"
+        TextInput:
+            id: condiciones
+
+        Label:
+            text: "Fecha y hora:"
+        TextInput:
+            id: fecha
+
+        Button:
+            text: "Crear Actividad"
+            on_release: root.crear_actividad()
+
+        Button:
+            text: "Mostrar Actividades"
+            on_release: root.mostrar_actividades()
